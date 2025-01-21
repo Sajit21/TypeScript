@@ -1,5 +1,4 @@
-"use strict";
-let a = 23;
+var a = 23;
 //use of Enumeration
 var UserROles;
 (function (UserROles) {
@@ -7,3 +6,7 @@ var UserROles;
     UserROles["guest"] = "guest";
 })(UserROles || (UserROles = {}));
 UserROles.admin;
+function PersonDetails(data) {
+    console.log(data);
+}
+PersonDetails({ name: "sajit", age: 21, height: 5.6 });
