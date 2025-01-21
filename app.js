@@ -1,4 +1,5 @@
-var a = 23;
+"use strict";
+let a = 23;
 //use of Enumeration
 var UserROles;
 (function (UserROles) {
@@ -10,3 +11,6 @@ function PersonDetails(data) {
     console.log(data);
 }
 PersonDetails({ name: "sajit", age: 21, height: 5.6 });
+function abcd(obj) {
+}
+abcd("harsh");

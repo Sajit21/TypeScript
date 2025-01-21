@@ -26,3 +26,15 @@ function PersonDetails(data: Person) {
 }
 
 PersonDetails({name:"sajit", age:21 , height:5.6});
+
+
+
+//type aliases
+
+type arg= string | null ;
+ function abcd(obj :arg)
+ {
+
+ }
+
+ abcd("harsh")
