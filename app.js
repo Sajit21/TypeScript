@@ -25,13 +25,32 @@
 //  abcd("harsh")
 //  ///
 //use of constructor
+//in ts we exclude the  public name part outside the constructor and also exclude the this.name=name part
 class person {
+    name;
+    age;
     constructor(name, age = 0) {
         this.name = name;
         this.age = age;
     }
 }
 let p = new person("sajit", 21);
-console.log('helllo boys');
 console.log(p.name);
-
+//in case of method
+class bottleMaker {
+    name;
+    // private fullname:string;
+    constructor(name) {
+        this.name = name;
+    }
+}
+class MorebottleMaker extends bottleMaker {
+    constructor(name) {
+        super(name);
+    }
+    getdetails() {
+        console.log(this.name);
+    } // we cannot access the private variable
+}
+let c = new MorebottleMaker("sajit");
+c.getdetails();

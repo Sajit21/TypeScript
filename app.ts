@@ -54,3 +54,26 @@
 
  let p= new person("sajit", 21)
  console.log(p.name);
+
+
+ //in case of method
+ class bottleMaker{
+  // private fullname:string;
+  constructor(public name:string)
+  {
+
+  }
+ }
+
+ class MorebottleMaker extends bottleMaker{
+   constructor(name:string )
+   {
+     super(name)
+   }
+   getdetails(){
+    console.log(this.name)
+   }// we cannot access the private variable
+ }
+
+ let c= new MorebottleMaker("sajit")
+  c.getdetails();
