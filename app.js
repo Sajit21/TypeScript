@@ -71,3 +71,12 @@ let p1 = new person1("sajit", 21);
 console.log(p1.name); //gives output of getter
 p1.name = "harsh";
 console.log(p1.name); //gives output of setter
+//use of static
+class shery {
+    static version = 3.4;
+    static getnumber() {
+        return Math.random();
+    }
+}
+console.log(shery.version);
+console.log(shery.getnumber());
