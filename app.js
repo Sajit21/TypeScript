@@ -79,9 +79,15 @@
 // console.log(shery.getnumber());
 //abstract classes and methods 
 //use of function with calback
-function person3(name, age, cb) {
-    cb("hari");
+// function person3(name: string, age: number, cb:(arg : string)=>void){ //void cause didn't returned anything 
+//   cb("hari")
+// }
+// person3("ram",22,(arg:string)=>{
+//   console.log(arg) //use of callback
+// })
+//use of rest paramaters
+function sum(...args) {
+    // return args.reduce((a,b)=>a+b,0)
+    console.log(args);
 }
-person3("ram", 22, (arg) => {
-    console.log(""); //use of callback
-});
+sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
