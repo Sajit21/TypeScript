@@ -122,9 +122,52 @@
 // })
 
 //use of rest paramaters
-function sum(...args:number[]){
-  // return args.reduce((a,b)=>a+b,0)
-  console.log(args)
+// function sum(...args:number[]){
+//   // return args.reduce((a,b)=>a+b,0)
+//   console.log(args)
+// }
+
+// sum(1,2,3,4,5,6,7,8,9,10)
+
+// //ts function overloading
+// function person(name:string ) :void
+// function person(name:string ,age:number) : number
+
+
+
+// function person(name:any, age?:number): |void | number{
+//   if(typeof name === "string" && age === undefined){
+//     console.log("hey")
+//   }
+// if( typeof name === "string" && typeof age === "number"){
+//   return 10;
+
+// }
+// else
+// {
+//   console.log("nothing")
+// }
+// }
+
+
+
+
+// // }
+
+
+// person("sajit")
+// let b =person("sajit",21)
+// console.log(b)
+// person("hari")
+
+
+
+
+//generics 
+//when we use a function and we don't know the type of the data we are using then we use generics
+function person<T>(name : T){
+
 }
 
-sum(1,2,3,4,5,6,7,8,9,10)
+person<string>("sajit") //simple use of generics
+
