@@ -165,9 +165,20 @@
 
 //generics 
 //when we use a function and we don't know the type of the data we are using then we use generics
-function person<T>(name : T){
-
+function log<T>(name : T){
+console.log(name)
 }
 
-person<string>("sajit") //simple use of generics
+log<string>("sajit") //simple use of generics  
 
+//generic interface
+interface person<T>{
+  name: string,
+  age :number,
+  address :T
+}
+function details(obj : person<string>){
+  console.log(obj)
+}
+
+details({name:"sajit", age:21 ,address: "kirtipur"}) //syntax for the value pass in obj
