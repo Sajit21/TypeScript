@@ -165,20 +165,48 @@
 
 //generics 
 //when we use a function and we don't know the type of the data we are using then we use generics
-function log<T>(name : T){
-console.log(name)
+// function log<T>(name : T){
+// console.log(name)
+// }
+
+// log<string>("sajit") //simple use of generics  
+
+// //generic interface
+// interface person<T>{
+//   name: string,
+//   age :number,
+//   address :T
+// }
+// function details(obj : person<string>){
+//   console.log(obj)
+// }
+
+// details({name:"sajit", age:21 ,address: "kirtipur"}) //syntax for the value pass in obj
+
+//type guard 
+//with typeof intanceof
+class Bikekey{
+  startbike(){
+    console.log("bike start gaar")
+    
+  }
 }
 
-log<string>("sajit") //simple use of generics  
-
-//generic interface
-interface person<T>{
-  name: string,
-  age :number,
-  address :T
-}
-function details(obj : person<string>){
-  console.log(obj)
+class carkey{
+  startcar(){
+    console.log("car start gaar")
+  }
 }
 
-details({name:"sajit", age:21 ,address: "kirtipur"}) //syntax for the value pass in obj
+let bike=new Bikekey();
+let car= new carkey();
+
+function details(bothKey: Bikekey | carkey)
+if(bothKey instanceof Bikekey)
+{
+  bothKey.startbike();
+}
+else if(bothKey instanceof carkey)
+{
+  bothKey.carkey();
+}
